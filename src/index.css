@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  --gradient-secondary: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+body {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  min-height: 100vh;
+}
+
+.task-card {
+  @apply transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.task-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.button-3d {
+  @apply transform active:scale-95 transition-transform;
+  background: var(--gradient-primary);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.button-3d:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.filter-card {
+  @apply backdrop-blur-lg bg-white/80;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
